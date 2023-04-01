@@ -38,6 +38,7 @@ from .budgetbytes import BudgetBytes
 from .castironketo import CastIronKeto
 from .cdkitchen import CdKitchen
 from .chefkoch import Chefkoch
+from .chefnini import Chefnini
 from .closetcooking import ClosetCooking
 from .comidinhasdochef import ComidinhasDoChef
 from .cookeatshare import CookEatShare
@@ -76,13 +77,16 @@ from .foodandwine import FoodAndWine
 from .foodnetwork import FoodNetwork
 from .foodrepublic import FoodRepublic
 from .forksoverknives import ForksOverKnives
+from .forktospoon import ForkToSpoon
 from .franzoesischkochen import FranzoesischKochen
 from .fredriksfikaallas import FredriksFikaAllas
 from .g750g import G750g
 from .geniuskitchen import GeniusKitchen
+from .gesundaktiv import GesundAktiv
 from .giallozafferano import GialloZafferano
 from .gimmesomeoven import GimmeSomeOven
 from .globo import Globo
+from .godt import Godt
 from .gonnawantseconds import GonnaWantSeconds
 from .goustojson import GoustoJson
 from .greatbritishchefs import GreatBritishChefs
@@ -156,9 +160,11 @@ from .owenhan import OwenHan
 from .paleorunningmomma import PaleoRunningMomma
 from .panelinha import Panelinha
 from .paninihappy import PaniniHappy
+from .pickuplimes import PickUpLimes
 from .pingodoce import PingoDoce
 from .popsugar import PopSugar
 from .practicalselfreliance import PracticalSelfReliance
+from .pressureluckcooking import PressureLuckCooking
 from .primaledgehealth import PrimalEdgeHealth
 from .projectgezond import ProjectGezond
 from .przepisy import Przepisy
@@ -175,6 +181,7 @@ from .rezeptwelt import Rezeptwelt
 from .rosannapansino import RosannaPansino
 from .rutgerbakt import RutgerBakt
 from .sallysbakingaddiction import SallysBakingAddiction
+from .sallysblog import SallysBlog
 from .saveur import Saveur
 from .seriouseats import SeriousEats
 from .simpleveganista import SimpleVeganista
@@ -264,6 +271,7 @@ SCRAPERS = {
     CastIronKeto.host(): CastIronKeto,
     CdKitchen.host(): CdKitchen,
     Chefkoch.host(): Chefkoch,
+    Chefnini.host(): Chefnini,
     ClosetCooking.host(): ClosetCooking,
     ComidinhasDoChef.host(): ComidinhasDoChef,
     CookEatShare.host(): CookEatShare,
@@ -302,6 +310,7 @@ SCRAPERS = {
     FoodAndWine.host(): FoodAndWine,
     FoodNetwork.host(): FoodNetwork,
     FoodRepublic.host(): FoodRepublic,
+    ForkToSpoon.host(): ForkToSpoon,
     ForksOverKnives.host(): ForksOverKnives,
     FranzoesischKochen.host(): FranzoesischKochen,
     FredriksFikaAllas.host(): FredriksFikaAllas,
@@ -310,6 +319,7 @@ SCRAPERS = {
     GialloZafferano.host(): GialloZafferano,
     GimmeSomeOven.host(): GimmeSomeOven,
     Globo.host(): Globo,
+    Godt.host(): Godt,
     GonnaWantSeconds.host(): GonnaWantSeconds,
     GoustoJson.host(): GoustoJson,
     GreatBritishChefs.host(): GreatBritishChefs,
@@ -320,11 +330,23 @@ SCRAPERS = {
     HeadbangersKitchen.host(): HeadbangersKitchen,
     HeinzBrasil.host(): HeinzBrasil,
     HelloFresh.host(): HelloFresh,
+    HelloFresh.host(domain="at"): HelloFresh,
+    HelloFresh.host(domain="be"): HelloFresh,
+    HelloFresh.host(domain="ca"): HelloFresh,
+    HelloFresh.host(domain="ch"): HelloFresh,
+    HelloFresh.host(domain="co.nz"): HelloFresh,
     HelloFresh.host(domain="co.uk"): HelloFresh,
+    HelloFresh.host(domain="com.au"): HelloFresh,
     HelloFresh.host(domain="de"): HelloFresh,
+    HelloFresh.host(domain="dk"): HelloFresh,
+    HelloFresh.host(domain="es"): HelloFresh,
     HelloFresh.host(domain="fr"): HelloFresh,
-    HelloFresh.host(domain="nl"): HelloFresh,
     HelloFresh.host(domain="ie"): HelloFresh,
+    HelloFresh.host(domain="it"): HelloFresh,
+    HelloFresh.host(domain="lu"): HelloFresh,
+    HelloFresh.host(domain="nl"): HelloFresh,
+    HelloFresh.host(domain="no"): HelloFresh,
+    HelloFresh.host(domain="se"): HelloFresh,
     HomeChef.host(): HomeChef,
     Hostthetoast.host(): Hostthetoast,
     HundredAndOneCookbooks.host(): HundredAndOneCookbooks,
@@ -396,10 +418,12 @@ SCRAPERS = {
     PaleoRunningMomma.host(): PaleoRunningMomma,
     Panelinha.host(): Panelinha,
     PaniniHappy.host(): PaniniHappy,
+    PickUpLimes.host(): PickUpLimes,
     PingoDoce.host(): PingoDoce,
     PopSugar.host(): PopSugar,
     PracticalSelfReliance.host(): PracticalSelfReliance,
     PracticalSelfReliance.host(domain="creativecanning.com"): PracticalSelfReliance,
+    PressureLuckCooking.host(): PressureLuckCooking,
     PrimalEdgeHealth.host(): PrimalEdgeHealth,
     ProjectGezond.host(): ProjectGezond,
     Przepisy.host(): Przepisy,
@@ -417,6 +441,7 @@ SCRAPERS = {
     RosannaPansino.host(): RosannaPansino,
     RutgerBakt.host(): RutgerBakt,
     SallysBakingAddiction.host(): SallysBakingAddiction,
+    SallysBlog.host(): SallysBlog,
     Saveur.host(): Saveur,
     SeriousEats.host(): SeriousEats,
     SimpleVeganista.host(): SimpleVeganista,
@@ -473,6 +498,7 @@ SCRAPERS = {
     Yummly.host(): Yummly,
     ZeitWochenmarkt.host(): ZeitWochenmarkt,
     ZenBelly.host(): ZenBelly,
+    GesundAktiv.host(): GesundAktiv,
 }
 
 
@@ -485,7 +511,7 @@ def scraper_exists_for(url_path: str) -> bool:
     return host_name in get_supported_urls()
 
 
-def scrape_me(url_path: str, **options: dict[str, Any]) -> AbstractScraper:
+def scrape_me(url_path: str, **options: Any) -> AbstractScraper:
     host_name = get_host_name(url_path)
 
     try:
